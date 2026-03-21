@@ -1,0 +1,132 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app { min-height: 100vh; }
+
+.header {
+  background: #1a1a2e;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.header h1 { font-size: 28px; }
+.header p { color: #888; flex: 1; }
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card h2 { margin-bottom: 16px; font-size: 20px; }
+
+input, textarea {
+  width: 100%;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+textarea { height: 80px; resize: vertical; }
+
+button.btn {
+  background: #9945ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.btn:hover { background: #7a35cc; }
+button.btn:disabled { background: #444; cursor: not-allowed; }
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.art-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.art-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.art-card-body { padding: 16px; }
+.art-card-body h3 { font-size: 18px; margin-bottom: 6px; }
+.art-card-body p { color: #888; font-size: 14px; margin-bottom: 12px; }
+
+.art-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-like {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-like:hover { border-color: #9945ff; }
+
+.btn-tip {
+  background: #14f195;
+  border: none;
+  color: #000;
+  border-radius: 8px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-tip:hover { background: #0ec97d; }
+
+.status {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #0d2a1f;
+  color: #14f195;
+  word-break: break-all;
+}
+
+.status.error { background: #2a0d0d; color: #ff6b6b; }
