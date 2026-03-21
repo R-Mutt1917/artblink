@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArtBlink — Mockups</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+body{background:#f5f5f0;padding:32px 24px;color:#1a1a1a}
+h1{font-size:22px;font-weight:500;margin-bottom:6px}
+.subtitle{color:#666;font-size:14px;margin-bottom:32px}
+.screen-wrap{background:#e8e6e0;border-radius:12px;padding:16px;margin-bottom:24px}
+.screen-label{font-size:11px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.app-frame{background:#0f0f1a;border-radius:10px;overflow:hidden;border:1px solid #2a2a4a}
+.app-header{background:#1a1a2e;padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #2a2a4a}
+.app-logo{width:24px;height:24px;background:#9945ff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.app-title{color:#fff;font-size:15px;font-weight:500;flex:1}
+.app-subtitle{color:#666;font-size:12px}
+.wallet-btn{background:#9945ff;color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:12px;font-weight:500;flex-shrink:0}
+.wallet-connected{background:#1a3a2a;color:#14f195;border:1px solid #0f6e56;border-radius:6px;padding:5px 12px;font-size:11px;flex-shrink:0}
+.app-body{padding:16px;display:flex;flex-direction:column;gap:16px;background:#0f0f1a}
+.mock-card{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:10px;padding:14px}
+.mock-card h3{color:#fff;font-size:13px;font-weight:500;margin-bottom:12px}
+.mock-input{background:#0f0f1a;border:1px solid #2a2a4a;border-radius:6px;height:32px;width:100%;margin-bottom:8px;display:flex;align-items:center;padding:0 10px}
+.mock-input span,.mock-textarea span{color:#666;font-size:12px}
+.mock-textarea{background:#0f0f1a;border:1px solid #2a2a4a;border-radius:6px;height:56px;width:100%;margin-bottom:8px;display:flex;align-items:flex-start;padding:8px 10px}
+.mock-btn{background:#9945ff;border-radius:6px;height:32px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:500}
+.mock-btn-tip{background:#14f195;border-radius:6px;height:26px;padding:0 10px;display:inline-flex;align-items:center;color:#000;font-size:11px;font-weight:500}
+.mock-btn-like{background:#1a1a2e;border:1px solid #2a2a4a;border-radius:6px;height:26px;padding:0 10px;display:inline-flex;align-items:center;color:#fff;font-size:11px}
+.mock-status-ok{background:#0d2a1f;border-radius:6px;padding:8px 10px;color:#14f195;font-size:11px;margin-top:8px;font-family:monospace}
+.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.art-card{background:#0f0f1a;border:1px solid #2a2a4a;border-radius:8px;overflow:hidden}
+.art-thumb{height:80px;background:#1a1a3e;display:flex;align-items:center;justify-content:center;color:#534AB7;font-size:20px}
+.art-thumb2{height:80px;background:#0d1a14;display:flex;align-items:center;justify-content:center;color:#0F6E56;font-size:20px}
+.art-body{padding:8px}
+.art-title{color:#fff;font-size:11px;font-weight:500;margin-bottom:2px}
+.art-artist{color:#555;font-size:10px;margin-bottom:6px;font-family:monospace}
+.art-actions{display:flex;gap:6px}
+.section-row{display:flex;gap:12px}
+.section-row .screen-wrap{flex:1}
+.input-label{color:#888;font-size:10px;margin-bottom:3px}
+.divider{height:1px;background:#2a2a4a;margin:10px 0}
+.blink-card{background:#1a1040;border:1px solid #534AB7;border-radius:10px;padding:14px}
+.blink-url{background:#0f0f1a;border:1px solid #2a2a4a;border-radius:6px;padding:6px 10px;color:#AFA9EC;font-size:10px;font-family:monospace;margin-bottom:10px}
+.blink-img{height:100px;background:#1a1a3e;border-radius:6px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:#7F77DD;font-size:28px}
+.blink-title{color:#fff;font-size:13px;font-weight:500;margin-bottom:4px}
+.blink-artist{color:#888;font-size:11px;margin-bottom:10px}
+.blink-actions{display:flex;gap:8px}
+.badge-green{background:#0d2a1f;color:#14f195;border-radius:4px;padding:1px 6px;font-size:10px;margin-left:6px}
+.dot{width:6px;height:6px;border-radius:50%;background:#9945ff;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<h1>🎨 ArtBlink — UI Mockups</h1>
+<p class="subtitle">Social On-Chain for Visual Artists · Solana WayLearn Hackathon 2026</p>
+
+<div class="section-row">
+  <div class="screen-wrap">
+    <div class="screen-label">1 — connect wallet</div>
+    <div class="app-frame">
+      <div class="app-header">
+        <div class="app-logo">🎨</div>
+        <div style="flex:1"><div class="app-title">ArtBlink</div><div class="app-subtitle">Arte visual on-chain en Solana</div></div>
+        <div class="wallet-btn">Select Wallet</div>
+      </div>
+      <div class="app-body">
+        <div style="background:#1a1a2e;border:1px dashed #2a2a4a;border-radius:10px;padding:24px;text-align:center">
+          <div style="color:#9945ff;font-size:28px;margin-bottom:8px">🔗</div>
+          <div style="color:#fff;font-size:13px;font-weight:500;margin-bottom:4px">Conectá tu wallet</div>
+          <div style="color:#666;font-size:11px;margin-bottom:12px">Phantom · Backpack · y más</div>
+          <div class="mock-btn" style="max-width:140px;margin:0 auto">Select Wallet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen-wrap">
+    <div class="screen-label">2 — crear perfil</div>
+    <div class="app-frame">
+      <div class="app-header">
+        <div class="app-logo">🎨</div>
+        <div style="flex:1"><div class="app-title">ArtBlink</div></div>
+        <div class="wallet-connected">8MD6..rNWy</div>
+      </div>
+      <div class="app-body">
+        <div class="mock-card">
+          <h3>👤 Crear perfil de artista</h3>
+          <div class="input-label">nombre artístico</div>
+          <div class="mock-input"><span>r mutt</span></div>
+          <div class="input-label">bio</div>
+          <div class="mock-textarea"><span>conceptual artist from BA</span></div>
+          <div class="mock-btn">Crear Perfil</div>
+          <div class="mock-status-ok">✅ Perfil creado! TX: 5dai...m5JH</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-row">
+  <div class="screen-wrap">
+    <div class="screen-label">3 — publicar obra</div>
+    <div class="app-frame">
+      <div class="app-header">
+        <div class="app-logo">🎨</div>
+        <div style="flex:1"><div class="app-title">ArtBlink</div></div>
+        <div class="wallet-connected">8MD6..rNWy</div>
+      </div>
+      <div class="app-body">
+        <div class="mock-card">
+          <h3>🖼 Publicar obra</h3>
+          <div class="input-label">título</div>
+          <div class="mock-input"><span>Obra 1</span></div>
+          <div class="input-label">URL de imagen</div>
+          <div class="mock-input"><span>https://...</span></div>
+          <div class="input-label">descripción</div>
+          <div class="mock-textarea"><span>obra 1 cartel</span></div>
+          <div class="mock-btn">Publicar Obra</div>
+          <div class="mock-status-ok">✅ Obra publicada! TX: 3A1V...2QbP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen-wrap">
+    <div class="screen-label">4 — artfeed (like & tip)</div>
+    <div class="app-frame">
+      <div class="app-header">
+        <div class="app-logo">🎨</div>
+        <div style="flex:1"><div class="app-title">ArtBlink</div></div>
+        <div class="wallet-connected">8MD6..rNWy</div>
+      </div>
+      <div class="app-body">
+        <div class="mock-card">
+          <h3>🎨 ArtFeed <span class="badge-green">2 obras on-chain</span></h3>
+          <div class="art-grid">
+            <div class="art-card">
+              <div class="art-thumb">🖼</div>
+              <div class="art-body">
+                <div class="art-title">Obra 1</div>
+                <div class="art-artist">8MD6...rNWy</div>
+                <div class="art-actions">
+                  <div class="mock-btn-like">❤️ 3</div>
+                  <div class="mock-btn-tip">💰 0.01</div>
+                </div>
+              </div>
+            </div>
+            <div class="art-card">
+              <div class="art-thumb2">🎭</div>
+              <div class="art-body">
+                <div class="art-title">Obra 2</div>
+                <div class="art-artist">3kPQ...xVwZ</div>
+                <div class="art-actions">
+                  <div class="mock-btn-like">❤️ 1</div>
+                  <div class="mock-btn-tip">💰 0.01</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="screen-wrap">
+  <div class="screen-label">5 — blink (solana action link)</div>
+  <div style="display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:1">
+      <div class="app-frame" style="max-width:300px">
+        <div class="app-body">
+          <div class="blink-card">
+            <div class="blink-url">artblink.app/art/4Lm6ue...ZwXy</div>
+            <div class="blink-img">🖼</div>
+            <div class="blink-title">Obra 1</div>
+            <div class="blink-artist">por r mutt · 8MD6...rNWy</div>
+            <div class="divider"></div>
+            <div style="color:#888;font-size:10px;margin-bottom:8px">Interactuá directamente desde este link</div>
+            <div class="blink-actions">
+              <div class="mock-btn-like" style="flex:1;justify-content:center">❤️ Like</div>
+              <div class="mock-btn-tip" style="flex:1;justify-content:center">💰 Tip 0.01 SOL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1.4;padding-top:8px">
+      <p style="font-size:13px;color:#444;margin-bottom:12px">Cada obra genera un link único tipo:</p>
+      <div style="background:#1a1a2e;border-radius:6px;padding:10px 14px;font-family:monospace;font-size:12px;color:#AFA9EC;margin-bottom:12px">artblink.app/art/{PDA_address}</div>
+      <p style="font-size:12px;color:#555;margin-bottom:12px">Ese link es un <strong>Solana Blink</strong> — ejecuta acciones on-chain desde cualquier plataforma que soporte Solana Actions.</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:8px;align-items:center"><div class="dot"></div><span style="font-size:12px;color:#555">Compartible en Twitter / X</span></div>
+        <div style="display:flex;gap:8px;align-items:center"><div class="dot"></div><span style="font-size:12px;color:#555">No requiere abrir la app</span></div>
+        <div style="display:flex;gap:8px;align-items:center"><div class="dot"></div><span style="font-size:12px;color:#555">Transacción real en Devnet</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
