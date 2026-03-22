@@ -18,11 +18,11 @@ export function CreateArt() {
   const [loading, setLoading] = useState(false);
 
   function getProgram() {
-    const provider = new AnchorProvider(connection, wallet as any, {
-      commitment: "confirmed",
-    });
-    return new Program(idl as any, provider);
-  }
+  const provider = new AnchorProvider(connection, wallet as any, {
+    commitment: "confirmed",
+  });
+  return new Program(idl as any, PROGRAM_ID, provider);
+}
 
   async function handleSubmit() {
     if (!wallet.publicKey) {

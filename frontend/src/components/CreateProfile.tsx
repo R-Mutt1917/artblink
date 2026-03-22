@@ -1,9 +1,9 @@
+import { Buffer } from "buffer";
 import { useState } from "react";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { Program, AnchorProvider, web3 } from "@coral-xyz/anchor";
 import { PublicKey } from "@solana/web3.js";
 import idl from "../idl/artblink.json";
-import { Buffer } from "buffer";
 
 const PROGRAM_ID = new PublicKey("4pnH8WgSinm6T3LhYS7BRyySta4G88mtHWLZWs6Rux1D");
 
@@ -17,64 +17,46 @@ export function CreateProfile() {
   const [loading, setLoading] = useState(false);
 
   function getProgram() {
+    (window as any).Buffer = Buffer;
+    (globalThis as any).Buffer = Buffer;
     const provider = new AnchorProvider(connection, wallet as any, {
       commitment: "confirmed",
     });
-    return new Program(idl as any, provider);
+    return new Program(idl as any, PROGRAM_ID, provider);
   }
 
   async function handleSubmit() {
-  if (!wallet.publicKey) {
-    setStatus("Conectá tu wallet primero");
-    setIsError(true);
-    return;
+    if (!wallet.publicKey) {
+      setStatus("Conectá tu wallet primero");
+      setIsError(true);
+      return;
+    }
+    setLoading(true);
+    setStatus("");
+    setIsError(false);
+    try {
+      const program = getProgram();
+      const seedString = new TextEncoder().encode("profile");
+      const pubkeyBytes = wallet.publicKey.toBytes();
+      const [profilePDA] = PublicKey.findProgramAddressSync(
+        [seedString, pubkeyBytes],
+        PROGRAM_ID
+      );
+      const tx = await (program.methods as any)
+        .createProfile(name, bio)
+        .accounts({
+          artistProfile: profilePDA,
+          user: wallet.publicKey,
+          systemProgram: web3.SystemProgram.programId,
+        })
+        .rpc();
+      setStatus(`✅ Perfil creado! TX: ${tx}`);
+    } catch (e: any) {
+      setStatus(`Error: ${e.message}`);
+      setIsError(true);
+    }
+    setLoading(false);
   }
-
-  // Debug - agregamos esto para ver qué pasa
-  console.log("wallet.publicKey:", wallet.publicKey);
-  console.log("Buffer:", Buffer);
-  console.log("Buffer.from:", Buffer.from);
-
-  setLoading(true);
-  setStatus("");
-  setIsError(false);
-
-  try {
-    const seedString = new TextEncoder().encode("profile");
-    const pubkeyBytes = wallet.publicKey.toBytes();
-    
-    console.log("seedString:", seedString);
-    console.log("pubkeyBytes:", pubkeyBytes);
-
-    const [profilePDA] = PublicKey.findProgramAddressSync(
-      [seedString, pubkeyBytes],
-      PROGRAM_ID
-    );
-
-    console.log("profilePDA:", profilePDA.toString());
-
-    const provider = new AnchorProvider(connection, wallet as any, {
-      commitment: "confirmed",
-    });
-    const program = new Program(idl as any, provider);
-
-    const tx = await (program.methods as any)
-      .createProfile(name, bio)
-      .accounts({
-        artistProfile: profilePDA,
-        user: wallet.publicKey,
-        systemProgram: web3.SystemProgram.programId,
-      })
-      .rpc();
-
-    setStatus(`✅ Perfil creado! TX: ${tx}`);
-  } catch (e: any) {
-    setStatus(`Error: ${e.message}`);
-    setIsError(true);
-  }
-
-  setLoading(false);
-}
 
   return (
     <div className="card">

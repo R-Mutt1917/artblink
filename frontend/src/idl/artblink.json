@@ -55,7 +55,7 @@
       "type": {
         "kind": "struct",
         "fields": [
-          {"name": "owner", "type": "pubkey"},
+          {"name": "owner", "type": "publicKey"},
           {"name": "name", "type": "string"},
           {"name": "bio", "type": "string"},
           {"name": "totalTips", "type": "u64"}
@@ -67,7 +67,7 @@
       "type": {
         "kind": "struct",
         "fields": [
-          {"name": "artist", "type": "pubkey"},
+          {"name": "artist", "type": "publicKey"},
           {"name": "title", "type": "string"},
           {"name": "imageUrl", "type": "string"},
           {"name": "description", "type": "string"},
@@ -83,7 +83,7 @@
       "type": {
         "kind": "struct",
         "fields": [
-          {"name": "owner", "type": "pubkey"},
+          {"name": "owner", "type": "publicKey"},
           {"name": "name", "type": "string"},
           {"name": "bio", "type": "string"},
           {"name": "totalTips", "type": "u64"}
@@ -95,7 +95,7 @@
       "type": {
         "kind": "struct",
         "fields": [
-          {"name": "artist", "type": "pubkey"},
+          {"name": "artist", "type": "publicKey"},
           {"name": "title", "type": "string"},
           {"name": "imageUrl", "type": "string"},
           {"name": "description", "type": "string"},

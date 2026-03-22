@@ -1,12 +1,12 @@
+import { Buffer } from 'buffer';
 import { useEffect, useState } from "react";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { Program, AnchorProvider, web3, BN } from "@coral-xyz/anchor";
 import { PublicKey } from "@solana/web3.js";
 import idl from "../idl/artblink.json";
-import { Buffer } from 'buffer';
-if (typeof window !== 'undefined') {
-  (window as any).Buffer = Buffer;
-}
+
+(window as any).Buffer = Buffer;
+(globalThis as any).Buffer = Buffer;
 
 const PROGRAM_ID = new PublicKey("4pnH8WgSinm6T3LhYS7BRyySta4G88mtHWLZWs6Rux1D");
 
@@ -18,23 +18,27 @@ export function ArtFeed() {
   const [tipStatus, setTipStatus] = useState<{ [key: string]: string }>({});
 
   function getProgram() {
-    const provider = new AnchorProvider(
-      connection,
-      wallet.publicKey
-        ? (wallet as any)
-        : {
-            publicKey: null,
-            signTransaction: async (tx: any) => tx,
-            signAllTransactions: async (txs: any) => txs,
-          },
-      {}
-    );
-    return new Program(idl as any, provider);
-  }
+  (window as any).Buffer = Buffer;
+  (globalThis as any).Buffer = Buffer;
+  const provider = new AnchorProvider(
+    connection,
+    wallet.publicKey
+      ? (wallet as any)
+      : {
+          publicKey: null,
+          signTransaction: async (tx: any) => tx,
+          signAllTransactions: async (txs: any) => txs,
+        },
+    {}
+  );
+  return new Program(idl as any, PROGRAM_ID, provider);
+}
 
   async function loadPosts() {
     setLoading(true);
     try {
+      (window as any).Buffer = Buffer;
+      (globalThis as any).Buffer = Buffer;
       const program = getProgram();
       const allPosts = await (program.account as any).artPost.all();
       setPosts(allPosts);
@@ -45,14 +49,16 @@ export function ArtFeed() {
   }
 
   useEffect(() => {
-    if (connection) {
+    const timer = setTimeout(() => {
       loadPosts();
-    }
-  }, []);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [connection]);
 
   async function handleLike(post: any) {
     if (!wallet.publicKey) return;
     try {
+      (window as any).Buffer = Buffer;
       const program = getProgram();
       await (program.methods as any)
         .likeArt()
@@ -72,6 +78,7 @@ export function ArtFeed() {
     const key = post.publicKey.toString();
     setTipStatus(s => ({ ...s, [key]: "Enviando..." }));
     try {
+      (window as any).Buffer = Buffer;
       const program = getProgram();
       const amount = new BN(10_000_000);
       await (program.methods as any)
