@@ -129,7 +129,7 @@ All transactions are verifiable on [Solana Explorer (Devnet)](https://explorer.s
 | Tool | Purpose |
 |------|---------|
 | Rust | Smart contract language |
-| Anchor 0.30 | Solana framework |
+| Anchor 0.26.0 | Solana framework |
 | Solana Playground | Build & deploy IDE |
 | Devnet | Test network |
 
