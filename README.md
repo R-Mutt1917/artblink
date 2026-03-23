@@ -179,7 +179,7 @@ Requires:
 
 | Layer | Tech |
 |-------|------|
-| Smart contract | Rust + Anchor 0.30 |
+| Smart contract | Rust + Anchor 0.26.0 |
 | Deploy environment | Solana Playground |
 | Frontend | React 19 + TypeScript |
 | Wallet | @solana/wallet-adapter (Phantom, Backpack) |
