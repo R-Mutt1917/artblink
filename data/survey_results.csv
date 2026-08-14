@@ -1,0 +1,13 @@
+question,total,yes,no,maybe,other,notes
+n_responses,120,,,,,"Encuesta completada entre 2026-07-10 y 2026-07-25"
+role_distribution,120,Artists:55,Collectors:40,Curators:10,Other:15,
+used_solana_wallet,120,48,72,,,"48 yes (40%), 72 no (60%)"
+importance_trazability,120,,,,,"Scale 1-5: 1:3%,2:5%,3:24%,4:38%,5:30% -> 68% rated 4-5"
+would_use_tips_collect,120,78,12,30,,"65% yes, 10% no, 25% maybe"
+main_friction_text_samples,10,,,,,"Common: wallet creation, unclear fees, editing metadata"
+sample_rows,"id,role,used_wallet,traceability_rating,main_friction,email"
+1,Artist,No,5,"Wallet creation confusing",maria@example.com
+2,Collector,Yes,4,"Lack of seller reputation",alex@example.eu
+3,Artist,No,3,"Editing metadata after publish",luis@example.mx
+4,Collector,No,5,"Need fiat onramp",joaquin@example.com
+5,Artist,Yes,4,"Clarity on collect vs sale",sofia@example.es

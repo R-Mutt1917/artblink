@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#eefdf6"/>
+  <text x="60" y="60" font-family="sans-serif" font-size="22" fill="#065f46">DESPUÉS — Flujo optimizado (propuesto)</text>
+  <rect x="60" y="100" width="760" height="260" rx="8" fill="#fff" stroke="#d1fae5"/>
+  <text x="80" y="140" font-family="sans-serif" font-size="14" fill="#064e3b">Pasos: 1) Modo Demo disponible 2) Microcopy + tooltips para metadatos 3) Confirm modal con fees y tiempo 4) Opción editar versión</text>
+  <text x="80" y="180" font-family="sans-serif" font-size="13" fill="#065f46">Beneficios: menor drop-off, claridad de comisiones, más conversiones a wallet real</text>
+</svg>

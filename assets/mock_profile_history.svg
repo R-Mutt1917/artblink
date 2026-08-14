@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f8fafc"/>
+  <rect x="40" y="30" width="820" height="70" rx="6" fill="#111827"/>
+  <text x="60" y="72" font-family="sans-serif" font-size="22" fill="#fff">Perfil — Mariana R. (Artista)</text>
+  <rect x="60" y="120" width="260" height="240" rx="8" fill="#ffffff" stroke="#e6eef3"/>
+  <text x="80" y="150" font-family="sans-serif" font-size="14" fill="#111827">Badge: Verificado</text>
+  <text x="80" y="175" font-family="sans-serif" font-size="14" fill="#374151">Ventas: 6</text>
+  <text x="80" y="195" font-family="sans-serif" font-size="14" fill="#374151">Total recaudado: 2.4 SOL</text>
+  <rect x="340" y="120" width="540" height="240" rx="8" fill="#ffffff" stroke="#e6eef3"/>
+  <text x="360" y="150" font-family="sans-serif" font-size="16" fill="#111827">Historial de actividad</text>
+  <text x="360" y="180" font-family="sans-serif" font-size="13" fill="#6b7280">2026-07-18 — Collect — Obra: "Atardecer" — 0.5 SOL</text>
+  <text x="360" y="200" font-family="sans-serif" font-size="13" fill="#6b7280">2026-07-20 — Tip — 0.1 SOL</text>
+  <text x="360" y="220" font-family="sans-serif" font-size="13" fill="#6b7280">2026-07-22 — Venta privada — 1.2 SOL</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#fff7ed"/>
+  <text x="60" y="60" font-family="sans-serif" font-size="22" fill="#92400e">ANTES — Flujo de publicación (confuso)</text>
+  <rect x="60" y="100" width="760" height="260" rx="8" fill="#fff" stroke="#f3e8d9"/>
+  <text x="80" y="140" font-family="sans-serif" font-size="14" fill="#6b7280">Pasos: 1) Subir imagen 2) Ingresar metadatos (texto confuso) 3) Confirmar (sin info de fees)</text>
+  <text x="80" y="180" font-family="sans-serif" font-size="13" fill="#6b7280">Problemas detectados: falta ayuda contextual, edición confusa, ausencia de modo demo</text>
+</svg>

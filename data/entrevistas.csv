@@ -1,0 +1,9 @@
+ID,Role,Age_Location,Experience_NFT_Solana,Date,Recruit_Channel,Consent_Evidence,Main_Insight,Proposed_Action
+UX-01,Artista visual,29_MX,baja,2026-07-20,Instagram,S,"Se pierde al crear wallet; pide modo demo","Implementar 'Probar sin wallet' + tutorial"
+UX-02,Coleccionista,34_EU,media,2026-07-21,Twitter,S,"Quiere señales de confianza (historial)","Añadir historial ventas y badge verificación"
+UX-03,Curador galería,42_LATAM,baja,2026-07-22,Contacto local,S,"Interesado en pilotos institucionales","Diseñar paquete piloto B2B"
+UX-04,Early adopter,27_US,alta,2026-07-23,Discord,S,"Pide badges de reputación y filtros por curadores","Diseñar badges y filtros de curaduría"
+UX-05,Dev + artista,31_EU,media,2026-07-24,Twitter,N,"Problemas al editar metadatos","Crear editor de metadatos y UX para versionado"
+UX-06,Comprador ocasional,38_LATAM,ninguna,2026-07-25,Instagram,S,"Necesita onramp fiat","Investigar integraciones MoonPay/Transak"
+UX-07,Colectivo artistico,Varios_MX,baja/media,2026-07-26,Comunidad local,S,"Valoran curaduría y visibilidad para emergentes","Crear criterios de curaduría y programa 'exhibit'"
+UX-08,Representante galería,45_LATAM,baja,2026-07-27,Contacto local,S,"Piloto atractivo si hay soporte técnico","Ofrecer piloto y soporte técnico para 5 artistas"
